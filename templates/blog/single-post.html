@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-wrapper">
+                            <h2 class="product-title">Blog Details</h2>
+                            <ol class="breadcrumb">
+                                <li><a href="#">Home /</a></li>
+                                <li class="current">Blog Details</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-xs-12">
+                        <div class="blog-post single-post">
+                            <div class="post-thumb">
+                                <a href="#"><img class="img-fluid" src="/{{ blog.image }}" alt="" /></a>
+                                <div class="hover-wrap"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h2 class="post-title"><a href="single-post.html">{{ blog.name }}</a></h2>
+                                <div class="meta">
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-user"></i> Clasihub</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-alarm-clock"></i>{{ blog.created_date }}</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-folder"></i> Sticky</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-comments-alt"></i> 1 Comments</a>
+                                    </span>
+                                </div>
+                                <div class="entry-summary">
+                                    <p>
+                                     {{ blog.description|safe }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="comments">
+                            <div class="comment-box">
+                                <h3>Comments</h3>
+                                <ol class="comments-list" id="comment-list">
+                                 {% for comment in comments %}
+                                    <li>
+                                        <div class="media">
+                                            <div class="thumb-left">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/img/blog/user1.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="info-body">
+                                                <div class="media-heading">
+                                                    <h4 class="name">{{ comment.name }}</h4>
+                                                    <span class="comment-date"><i class="lni-alarm-clock"></i>{{ commet.created_date }}</span>
+                                                    <a href="#" class="reply-link"><i class="lni-reply"></i> Reply</a>
+                                                </div>
+                                                <p>
+                                                 {{ comment.message }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                 {% endfor %}
+                                </ol>
+                                <div id="respond">
+                                    <h2 class="respond-title">Leave A Comment</h2>
+                                    <form method="POST" id="comment_form" data-url="{% url 'commet' blog.id %}">
+                                        {%csrf_token%}
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12col-xs-12">
+                                                <div class="form-group">
+                                                    {{forms}}
+                                                </div>
+                                                <button type="submit" id="comment_button" class="btn btn-common">Post Comment</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside id="sidebar" class="col-lg-4 col-md-12 col-xs-12 right-sidebar">
+                        <div class="widget_search">
+                            <form id="search-form">
+                                <input type="search" class="form-control" autocomplete="off" name="s" placeholder="Search..." id="search-input" value="" />
+                                <button type="submit" id="search-submit" class="search-btn"><i class="lni-search"></i></button>
+                            </form>
+                        </div>
+                       <div class="widget categories">
+                        <h4 class="widget-title">All Categories</h4>
+                        <ul class="categories-list">
+                            {% for category in categorys %}
+                               <li>
+                                <a href="{% url 'blog'%}">
+                                    <i class="lni-dinner"></i>
+                                    {{ category.name }} <span class="category-counter">{{ category.parent }}</span>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                     <div class="widget widget-popular-posts">
+                        <h4 class="widget-title">Recent Posts</h4>
+                        <ul class="posts-list">
+                            {% for last_commet in last_commets %}
+                               <li>
+                                 <div class="widget-content">
+                                    <a href="#">{{ last_commet.name }}</a>
+                                    <span><i class="icon-calendar"></i>{{ last_commet.created_date }}</span>
+                                 </div>
+                                <div class="clearfix"></div>
+                               </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <div class="page-header" style="background: url({% static 'assets/img/banner1.jpg' %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-wrapper">
+                        <h2 class="product-title">Blog</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home /</a></li>
+                            <li class="current">Blog</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="{% url 'add_blog'%}" method="POST"  enctype="multipart/form-data">{% csrf_token %}
+       <div id="content" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-xs-12">
+                    <div class="pagination-bar">
+                       <h1 style="text-align:center">ADD BLOG POST </h1>
+                           {{form.as_p}}<br>
+                           <div class="post-btn">
+                               <a style="text-align:center" class="btn btn-common" href="{% url 'blog'%}"><i class="lni-pencil-alt"></i> EXIT </a>
+                               <input style="text-align:center" class="btn btn-common" type="submit" value="ADD"  class="lni-pencil-alt">
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+{% endblock %}

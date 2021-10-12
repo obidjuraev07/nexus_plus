@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+	<div class="page-header" style="background: url({% static 'img/banner1.jpg' %});">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="breadcrumb-wrapper">
+						<h2 class="product-title">Join Us</h2>
+						<ol class="breadcrumb">
+							<li>
+								<a href="#">Home /</a>
+							</li>
+							<li class="current">Register</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="register section-padding">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-5 col-md-12 col-xs-12">
+					<div class="register-form login-area">
+						<h3>Register</h3>
+						<form class="login-form" method="POST">
+							{% csrf_token %}
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="lni-user"></i> {{ form.username }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="lni-envelope"></i>{{ form.email }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="lni-envelope"></i>{{ form.first_name }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="lni-envelope"></i>{{ form.last_name }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="lni-lock"></i> {{ form.password1 }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-icon">
+									<i class="lni-lock"></i> {{ form.password2 }}
+								</div>
+							</div>
+							<div class="form-group mb-3">
+								<div class="custom-control custom-checkbox">
+									<input class="custom-control-input" id="checkedall" type="checkbox"> <label class="custom-control-label" for="checkedall">By registering, you accept our Terms & Conditions</label>
+								</div>
+							</div>
+							<div class="text-center">
+								<button class="btn btn-common log-btn">Register</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

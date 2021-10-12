@@ -1,0 +1,290 @@
+{% extends 'base.html'%}
+{% block content %}
+
+        <div class="page-header" style="background: url(assets/img/banner1.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-wrapper">
+                            <h2 class="product-title">Blog</h2>
+                            <ol class="breadcrumb">
+                                <li><a href="#">Home /</a></li>
+                                <li class="current">Blog</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <aside id="sidebar" class="col-lg-4 col-md-12 col-xs-12 right-sidebar">
+                        <div class="widget_search">
+                            <form role="search" id="search-form">
+                                <input type="search" class="form-control" autocomplete="off" name="s" placeholder="Search..." id="search-input" value="" />
+                                <button type="submit" id="search-submit" class="search-btn"><i class="lni-search"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="widget categories">
+                            <h4 class="widget-title">All Categories</h4>
+                            <ul class="categories-list">
+                                <li>
+                                    <a href="#">
+                                        <i class="lni-dinner"></i>
+                                        Hotel & Travels <span class="category-counter">(5)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="lni-control-panel"></i>
+                                        Services <span class="category-counter">(8)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="lni-github"></i>
+                                        Pets <span class="category-counter">(2)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="lni-coffee-cup"></i>
+                                        Restaurants <span class="category-counter">(3)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="lni-home"></i>
+                                        Real Estate <span class="category-counter">(4)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="lni-pencil"></i>
+                                        Jobs <span class="category-counter">(5)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="lni-display"></i>
+                                        Electronics <span class="category-counter">(9)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="widget widget-popular-posts">
+                            <h4 class="widget-title">Recent Posts</h4>
+                            <ul class="posts-list">
+                                <li>
+                                    <div class="widget-thumb">
+                                        <a href="#"><img src="assets/img/blog/thumb1.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="widget-content">
+                                        <a href="#">Eum Iriure Dolor Duis Autem</a>
+                                        <span><i class="icon-calendar"></i>June 21, 2018</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li>
+                                    <div class="widget-thumb">
+                                        <a href="#"><img src="assets/img/blog/thumb2.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="widget-content">
+                                        <a href="#">Consectetuer Adipiscing Elit</a>
+                                        <span><i class="icon-calendar"></i>June 18, 2018</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li>
+                                    <div class="widget-thumb">
+                                        <a href="#"><img src="assets/img/blog/thumb3.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="widget-content">
+                                        <a href="#">Et Leggings Fanny Pack</a>
+                                        <span><i class="icon-calendar"></i>June 17, 2018</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li>
+                                    <div class="widget-thumb">
+                                        <a href="#"><img src="assets/img/blog/thumb4.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="widget-content">
+                                        <a href="#">Exercitation Photo Booth</a>
+                                        <span><i class="icon-calendar"></i>June 12, 2018</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li>
+                                    <div class="widget-thumb">
+                                        <a href="#"><img src="assets/img/blog/thumb5.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="widget-content">
+                                        <a href="#">Eum Iriure Dolor Duis Autem</a>
+                                        <span><i class="icon-calendar"></i>June 9, 2018</span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget">
+                            <h4 class="widget-title">Advertisement</h4>
+                            <div class="add-box">
+                                <img src="assets/img/img1.jpg" alt="" />
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="col-lg-8 col-md-12 col-xs-12">
+                        <div class="blog-post">
+                            <div class="post-thumb">
+                                <a href="#"><img class="img-fluid" src="assets/img/blog/blog1.jpg" alt="" /></a>
+                                <div class="hover-wrap"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <div class="meta">
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-user"></i> Clasified</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-alarm-clock"></i> June 21, 2018</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-folder"></i> Sticky</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-comments-alt"></i> 1 Comments</a>
+                                    </span>
+                                </div>
+                                <h2 class="post-title"><a href="single-post.html">Eum Iriure Dolor Duis Autem</a></h2>
+                                <div class="entry-summary">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis soluta libero molestiae, id reiciendis ipsum consequuntur odit sapiente accusantium odio. Esse nemo quos quaerat illo! Enim saepe impedit
+                                        distinctio, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate voluptatum dolores mollitia consequatur velit, veritatis in pariatur ducimus numquam ipsa iusto! Rem eveniet
+                                        dolorum, quisquam neque beatae quas ea tenetur!
+                                    </p>
+                                </div>
+                                <a href="single-post.html" class="btn btn-common">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="post-thumb">
+                                <a href="#"><img class="img-fluid" src="assets/img/blog/blog2.jpg" alt="" /></a>
+                                <div class="hover-wrap"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <div class="meta">
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-user"></i> Clasified</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-alarm-clock"></i> June 21, 2018</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-folder"></i> Sticky</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-comments-alt"></i> 1 Comments</a>
+                                    </span>
+                                </div>
+                                <h2 class="post-title"><a href="single-post.html">Consectetuer Adipiscing Elit</a></h2>
+                                <div class="entry-summary">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis soluta libero molestiae, id reiciendis ipsum consequuntur odit sapiente accusantium odio. Esse nemo quos quaerat illo! Enim saepe impedit
+                                        distinctio, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate voluptatum dolores mollitia consequatur velit, veritatis in pariatur ducimus numquam ipsa iusto! Rem eveniet
+                                        dolorum, quisquam neque beatae quas ea tenetur!
+                                    </p>
+                                </div>
+                                <a href="single-post.html" class="btn btn-common">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-post">
+                            <div class="post-thumb">
+                                <a href="#"><img class="img-fluid" src="assets/img/blog/blog3.jpg" alt="" /></a>
+                                <div class="hover-wrap"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <div class="meta">
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-user"></i> Clasified</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-alarm-clock"></i> June 21, 2018</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-folder"></i> Sticky</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-comments-alt"></i> 1 Comments</a>
+                                    </span>
+                                </div>
+                                <h2 class="post-title"><a href="single-post.html">Et Leggings Fanny Pack</a></h2>
+                                <div class="entry-summary">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis soluta libero molestiae, id reiciendis ipsum consequuntur odit sapiente accusantium odio. Esse nemo quos quaerat illo! Enim saepe impedit
+                                        distinctio, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate voluptatum dolores mollitia consequatur velit, veritatis in pariatur ducimus numquam ipsa iusto! Rem eveniet
+                                        dolorum, quisquam neque beatae quas ea tenetur!
+                                    </p>
+                                </div>
+                                <a href="single-post.html" class="btn btn-common">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-post video-post">
+                            <div class="post-thumb">
+                                <div class="video-wrapper">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/qighCE8WfBk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <div class="post-content">
+                                <div class="meta">
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-user"></i> Clasified</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-alarm-clock"></i> June 21, 2018</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-folder"></i> Sticky</a>
+                                    </span>
+                                    <span class="meta-part">
+                                        <a href="#"><i class="lni-comments-alt"></i> 1 Comments</a>
+                                    </span>
+                                </div>
+                                <h2 class="post-title"><a href="single-post.html">Exercitation Photo Booth</a></h2>
+                                <div class="entry-summary">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis soluta libero molestiae, id reiciendis ipsum consequuntur odit sapiente accusantium odio. Esse nemo quos quaerat illo! Enim saepe impedit
+                                        distinctio, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate voluptatum dolores mollitia consequatur velit, veritatis in pariatur ducimus numquam ipsa iusto! Rem eveniet
+                                        dolorum, quisquam neque beatae quas ea tenetur!
+                                    </p>
+                                </div>
+                                <a href="single-post.html" class="btn btn-common">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="pagination-bar">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    {% if query %}
+         <h1> You searching:>> {{ query }} </h1>
+         {% for value in queryset %}
+          <a href="{#}">{{ value }}</a>
+         {% endfor %}
+    {% else %}
+         <h1> You serching None </h1>
+    {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="page-header" style="background: url({% static '/img/banner1.jpg' %});">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-wrapper">
+                    <h2 class="product-title">Contact Us</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home /</a></li>
+                        <li class="current">Contact Us</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="google-map-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <object
+                    style="border: 0; height: 450px; width: 100%;"
+                    data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.4308576505186!2d69.22506702818667!3d41.29312332034891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bd0665c8fa3%3A0xe8f3e745e19afbbd!2sHuawei%20Customer%20Service%20Center%20Tashkent!5e0!3m2!1sru!2s!4v1633094221020!5m2!1sru!2s"
+                ></object>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="content" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-xs-12">
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <h2 class="contact-title">
+                        Send Message Us
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                {% for label in form %}
+                                {% if forloop.counter < 4%}
+                                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        {{label}}
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        {{form.message}}
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" id="submit" class="btn btn-common" >Submit Now</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="information mb-4">
+                    <h3>Address</h3>
+                    <div class="contact-datails">
+                        <p>Tashkent, Chilonzor, Muqimiy Kochasi, 20-B</p>
+                    </div>
+                </div>
+                <div class="information">
+                    <h3>Contact Info</h3>
+                    <div class="contact-datails">
+                        <ul class="list-unstyled info">
+                            <li>
+                                <span>Address : </span>
+                                <p>Tashkent, Chilonzor, Muqimiy Kochasi, 20-B</p>
+                            </li>
+                            <li>
+                                <span>Email : </span>
+                                <p>
+                                    <a href="#"><span class="__cf_email__" data-cfemail="c0b3b5b0b0afb2b480ada1a9aceea3afad">mr.yahyasaid03@gmail.com</span></a>
+                                </p>
+                            </li>
+                            <li>
+                                <span>Phone : </span>
+                                <p>+998-94-014-70-88</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
